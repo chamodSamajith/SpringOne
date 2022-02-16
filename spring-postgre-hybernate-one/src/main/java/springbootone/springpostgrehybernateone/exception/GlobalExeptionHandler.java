@@ -1,8 +1,7 @@
-package springbootone.exception;
+package springbootone.springpostgrehybernateone.exception;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ControllerAdvice;
-import springbootone.exception.Errordetails;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ExceptionHandler;

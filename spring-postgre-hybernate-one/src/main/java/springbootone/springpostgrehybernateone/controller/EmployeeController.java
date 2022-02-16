@@ -1,12 +1,11 @@
-package springbootone.controller;
+package springbootone.springpostgrehybernateone.controller;
 
-import com.sun.istack.NotNull;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import springbootone.exception.ResourceNotFoundException;
-import springbootone.model.Employee;
-import springbootone.repositoty.EmployeeRepository;
+import springbootone.springpostgrehybernateone.exception.ResourceNotFoundException;
+import springbootone.springpostgrehybernateone.model.Employee;
+import springbootone.springpostgrehybernateone.repositoty.EmployeeRepository;
 
 import javax.validation.Valid;
 import java.util.HashMap;

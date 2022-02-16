@@ -1,4 +1,4 @@
-package springbootone.model;
+package springbootone.springpostgrehybernateone.model;
 
 import javax.persistence.*;
 
