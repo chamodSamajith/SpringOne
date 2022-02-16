@@ -1,4 +1,4 @@
-package springbootone.exception;
+package springbootone.springpostgrehybernateone.exception;
 
 import java.util.Date;
 
