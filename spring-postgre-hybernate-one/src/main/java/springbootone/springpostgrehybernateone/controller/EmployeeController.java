@@ -13,20 +13,20 @@ import java.util.List;
 import java.util.Map;
 
 @RestController
-@RequestMapping("/api/v1/")
+@RequestMapping("/api/v1/employees")
 public class EmployeeController {
 
     @Autowired
     private EmployeeRepository employeeRepository;
 
     //get employees
-    @GetMapping("employees")
+    @GetMapping("/")
     public List<Employee> getAllEmployee() {
         return this.employeeRepository.findAll();
     }
 
     //get employee by id
-    @GetMapping("/employees/{id}")
+    @GetMapping("/{id}")
     public ResponseEntity<Employee> getEmployeeById(@PathVariable(value = "id") Long employeeId)
             throws ResourceNotFoundException {
         Employee employee = employeeRepository.findById(employeeId)
@@ -35,13 +35,13 @@ public class EmployeeController {
     }
 
     //save employee
-    @PostMapping("employees")
+    @PostMapping("/save")
     public Employee createEmployee(@RequestBody Employee employee) {
         return this.employeeRepository.save(employee);
     }
 
     //update employee    - url id parameter will bind to the Long employeeId variable
-    @PutMapping("/employees/{id}")
+    @PutMapping("/{id}")
     public ResponseEntity<Employee> updateEmployee(@PathVariable(value = "id") Long employeeId,
                                                    @Valid @RequestBody Employee employeeDetails) throws ResourceNotFoundException {
         Employee employee = employeeRepository.findById(employeeId)
@@ -55,7 +55,7 @@ public class EmployeeController {
     }
 
     //delete employee
-    @DeleteMapping("/employees/{id}")
+    @DeleteMapping("/{id}")
     public Map<String, Boolean> deleteEmployee(@PathVariable(value = "id") Long employeeId)
             throws ResourceNotFoundException {
         Employee employee = employeeRepository.findById(employeeId)
