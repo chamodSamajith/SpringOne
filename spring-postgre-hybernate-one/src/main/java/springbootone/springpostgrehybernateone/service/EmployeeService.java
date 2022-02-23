@@ -2,6 +2,7 @@ package springbootone.springpostgrehybernateone.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Component;
 import springbootone.springpostgrehybernateone.dto.EmployeeDTO;
 import springbootone.springpostgrehybernateone.exception.ResourceNotFoundException;
 import springbootone.springpostgrehybernateone.model.Employee;
@@ -12,6 +13,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
+//add @component annotation solved the error
+@Component
 public class EmployeeService {
 
     @Autowired
